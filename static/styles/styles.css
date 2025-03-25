@@ -83,9 +83,12 @@ body{
     padding: 30px 0;
     gap: 20px;
 }
-
 .products img{
-    
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.products img:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3)
 }
 .container-products h1{
     text-align: center;
