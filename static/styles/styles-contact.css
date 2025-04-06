@@ -1,0 +1,135 @@
+.banner-text{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    color: #ffff;
+}
+.banner-text h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'poppins';
+}
+
+.banner-text p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'poppins';
+}
+
+.banner-contact img{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    
+}
+.contact-section{
+    background-color: #f8f4f1;
+    border-bottom: 1px solid #000;
+}
+
+#contactForm{
+    background-color: #D9C19D;
+    border: 1px solid #eaeaea;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+#contactForm input{
+    border: 1px solid #eaeaea;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+#contactForm input::placeholder{
+    color: #000;
+    font-size: 1rem;
+    font-family: 'poppins';
+}
+#contactForm input:hover{
+    border-color: #f3b176;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease 0s;
+    transform: translateY(-5px);
+}
+#contactForm textarea{
+    border: 1px solid #eaeaea;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+#contactForm textarea::placeholder{
+    color: #000;
+    font-size: 1rem;
+    font-family: 'poppins';
+}
+#contactForm textarea:hover{
+    border-color: #f3b176;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease 0s;
+    transform: translateY(-5px);
+}
+.button-enviar{
+    background-color: #f3b176;
+    color: black;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border: none;
+    margin-right: auto;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+}
+.button-enviar:hover {
+    background-color: #693b23;
+    color: #ffff;
+    transform: translateY(-7px);
+}
+.contact-section {
+    padding: 4rem 0;
+}
+.contact-map {
+    height: 400px;
+    width: 100%;
+    border: none;
+}
+
+.contact-map{
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 768px) {
+    .banner-text {
+        top: 30%;
+        left: 5%;
+    }
+    .banner-text h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner-text {
+        top: 15%;
+        left: 5%;
+    }
+    .banner-text h1 {
+        font-size: 1rem;
+    }
+    .banner-text p {
+        font-size: 0.5rem;
+    }
+    .form-contact{
+        text-align: center;
+    }
+    .ubication {
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+

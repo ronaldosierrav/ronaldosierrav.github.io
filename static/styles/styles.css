@@ -5,15 +5,13 @@ body{
     width: 100%;
 }
 .navbar{
-    background-color: #693b23;
-    display: flex;
+    background-color: #C7A07A;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px 20px;
     box-shadow: 0px 10px 5px -10px rgba(0,0,0,0.75);
 }
-.navbar-brand{
-    margin: 0 0 0 5rem;
-}
+
 .nav-link{
     color: white;
     margin: 0 10px;
@@ -22,11 +20,10 @@ body{
     padding-bottom: 8px; 
 }
 .nav-link:hover{
-    font-size: 1.5rem;
     color: #ffff;
     transition: 0.3s;
 }
-.nav-link::after {
+.nav-link::after, .nav-link.active::after {
     content: "";
     position: absolute;
     left: 0;
@@ -36,8 +33,13 @@ body{
     background-color: white;
     transition: width 0.3s ease-in-out;
 }
-.nav-link:hover::after {
+.nav-link:hover::after, .nav-link.active::after  {
     width: 100%;
+}
+
+.navbar img{
+    width: 100px;
+    height: 50px;
 }
 .banner {
     display: flex;
@@ -46,28 +48,6 @@ body{
 .banner-text {
     text-align: left;
     color: #5a3e2b; 
-}
-.frase{
-    font-family: 'lobster';
-}
-.button1 {
-    background-color: #f3b176;
-    color: black;
-    padding: 12px 24px;
-    font-size: 1.2rem;
-    letter-spacing: 2.5px;
-    border: none;
-    margin-right: auto;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
-    cursor: pointer;
-    text-align: start;
-    transition: all 0.3s ease 0s;
-}
-.button1:hover {
-    background-color: #693b23;
-    color: #ffff;
-    transform: translateY(-7px);
 }
 .container-products {
     background-color: #f8f4f1;
@@ -103,7 +83,6 @@ body{
     color: black;
     padding: 12px 24px;
     font-size: 1.2rem;
-    letter-spacing: 2.5px;
     border: none;
     margin-right: auto;
     border-radius: 45px;
@@ -129,6 +108,11 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
+}
+.container-history p::first-letter{
+    font-size: 2.5rem;
+    font-weight: 700;
 
 }
 
@@ -193,6 +177,7 @@ body{
 
 .social{
     justify-content: space-around;
+    margin-top: 30px;
 }
 
 .copy{
