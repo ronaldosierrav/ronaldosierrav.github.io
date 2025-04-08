@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/Coffe/static/styles/styles.css">
-    <link rel="stylesheet" href="/Coffe/static/styles/styles-menu.css">
+    <link rel="stylesheet" href="/static/styles/styles.css">
+    <link rel="stylesheet" href="/static/styles/styles-menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Signika:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="/static/images/icon.svg"> 
     <title>Coffe</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="/Coffe/static/images/1.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          <a class="navbar-brand" href="/index.html">
+            <img src="/static/images/1.svg" width="30" height="30" class="d-inline-block align-top" alt="">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <ul class="navbar-nav flex-col flex-wrap ms-md-auto">
               <li class="nav-item col-6 col-md-auto">
-                <a class="nav-link active" aria-current="page" href="menú.html">Menú</a>
+                <a class="nav-link active" aria-current="page" href="menu.html">Menú</a>
               </li>
               <li class="nav-item col-6 col-md-auto">
                 <a class="nav-link" href="about.html">Nosotros</a>
@@ -41,126 +42,205 @@
     <nav class="fw-bold">Menú</nav>
       <div class="products">
         <div>
-          <img src="/Coffe/static/images/bebidas.svg" width="150" height="150" alt="Producto 1" class="img-fluid">
+          <img src="/static/images/bebidas.svg" width="150" height="150" alt="Producto 1" class="img-fluid">
           <h1 >Bebidas</h1>
-         <button class="button2">Ver Productos</button>
+         <button onclick="document.getElementById('bebidas').scrollIntoView({ behavior: 'smooth' })" class="button2">Ver Productos</button>
         </div>
         <div>
-          <img src="/Coffe/static/images/cookies.svg" width="150" height="150" alt="Producto 2" class="img-fluid">
+          <img src="/static/images/cookies.svg" width="150" height="150" alt="Producto 2" class="img-fluid">
           <h1>Galletas</h1>
-          <button class="button2">Ver Productos</button>
+          <button onclick="document.getElementById('galletas').scrollIntoView({ behavior: 'smooth' })" class="button2">Ver Productos</button>
         </div>
         <div>
-          <img src="/Coffe/static/images/postres.svg" width="150" height="150" alt="Producto 3" class="img-fluid">
+          <img src="/static/images/postres.svg" width="150" height="150" alt="Producto 3" class="img-fluid">
           <h1>Postres</h1>
-          <button class="button2">Ver Productos</button>
+          <button onclick="document.getElementById('postres').scrollIntoView({ behavior: 'smooth' })" class="button2">Ver Productos</button>
         </div>
        <div>
-          <img src="/Coffe/static/images/sandwiches.svg" width="150" height="150" alt="Producto 4" class="img-fluid">
+          <img src="/static/images/sandwiches.svg" width="150" height="150" alt="Producto 4" class="img-fluid">
           <h1>Sandwiches</h1>
-          <button class="button2">Ver Productos</button>
+          <button onclick="document.getElementById('sandwiches').scrollIntoView({ behavior: 'smooth' })" class="button2">Ver Productos</button>
         </div>
     </div>
   </div>
 </div>
-<div>
-  <img src="" alt="Banner" class="img-fluid">
+  <div class="container mt-5" id="bebidas">
+    <h1 class="text-center mt-5 mb-5 fw-bold title-products">Bebidas</h1>
+   <!-- <div class="texto">
+     <p style="color: red; margin-bottom: 50px;">Desde los clásicos como el café americano y el espresso, hasta infusiones reconfortantes como el té de camomila o jengibre. Elige tu favorito y disfruta de una experiencia cálida y llena de sabor.</p>
+    </div> -->
+      <div class="row"> 
+        <div class="col-md-6 mb-4">
+          <div class="image-gallery">
+            <img src="/static/images/Coffe-helado.svg" alt="bebidas" class="img-fluid rounded mb-3 main-image">
+            <div class="d-flex gap-2 justify-content-center mt-5">
+              <img src="/static/images/Coffe-helado.svg" alt="Thumbnail 1" class="thumbnail rounded active" onclick="changeImage(event, this.src)">
+              <img src="/static/images/Cafe.jpg" alt="Thumbnail 2" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+              <img src="/static/images/Cafe_Americano.jpg" alt="Thumbnail 3" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+              <img src="/static/images/té.jpg" alt="Thumbnail 4" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+            </div>
+          </div>
+        </div>
+        <div class="d-flex  col-md-6 mb-4"> 
+          <div class="container-cafe" >
+            <div class="container-coffe d-block">
+              <div class="list">
+                <h2>Cafe Caliente</h2>
+                <ul id="products-list" class="product-list"></ul>
+                </ul>
+              </div>
+            </div>
+            <div class="container-cookies-1 d-block">
+              <div class="list">
+                <h2>Té</h2>
+                <ul id="products-list-tea" class="product-list"></ul>
+              </div>
+              <div class="d-flex"></div>
+              <button class="whatsapp-button">Domicilios<i class="bi bi-whatsapp"></i></button>
+            </div>
+          </div>
+          <div class="container-frappe d-block">
+            <div class="list">
+              <h2>Frappes Con Café</h2>
+              <ul id="products-list-frappe" class="product-list"></ul>
+            </div>
+            <div class="container-frappe-sc d-block">
+              <div class="list">
+                <h2>Frappes Sin Café</h2>
+                <ul id="products-list-frappe-sc" class="product-list"></ul>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+  </div>
 </div>
-  <div class="container mt-5">
-    <h1 class="text-center mt-5 mb-5">Bebidas</h1>
+  <div class="container mt-5" id="galletas">
+    <h1 class="text-center mt-5 mb-5 fw-bold title-products">Galletas</h1>
     <div class="row">
         <div class="col-md-6 mb-4">
-            <img src="/Coffe/static/images/Coffe-helado.svg" alt="Product" class="img-fluid rounded mb-3 product-image" id="mainImage">
-            <div class="d-flex gap-3 justify-content-center">
-                <img src="/Coffe/static/images/Coffe-helado.svg" alt="Thumbnail 1" class="thumbnail rounded active" onclick="changeImage(event, this.src)">
-                <img src="" alt="Thumbnail 2" class="thumbnail rounded" onclick="changeImage(event, this.src)">
-                <img src="" alt="Thumbnail 3" class="thumbnail rounded" onclick="changeImage(event, this.src)">
-                <img src="" alt="Thumbnail 4" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+          <div class="image-gallery">
+            <img src="/static/images/galleta_chocolate.jpg" alt="Galletas" class="img-fluid rounded mb-3 main-image">
+            <div class="d-flex gap-2 justify-content-center mt-5">
+                <img src="/static/images/galleta_chocolate.jpg" alt="Thumbnail 5" class="thumbnail rounded active  onclick="changeImage(event, this.src)">
+                <img src="/static/images/g_coco.jpg" alt="Thumbnail 6" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+                <img src="/static/images/g_caramelo.jpg" alt="Thumbnail 7" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+                <img src="/static/images/g_c-chocolate.jpg" alt="Thumbnail 8" class="thumbnail rounded" onclick="changeImage(event, this.src)">
             </div>
+          </div>
         </div>
-        <div class="d-block col-md-6 mb-4"> 
-            <div class="Product-details">
-                <h2>Cafe Caliente</h2>
-                <ul id="products-list"></ul>
-                <script>
-                    const products = [
-                        { name: 'Café Americano'},
-                        { name: 'Café con Leche'},
-                        { name: 'Café Espresso'},
-                        { name: 'Café Mocha'},
-                        { name: 'Café Latte'},
-                    ];
-                    const productsList = document.getElementById('products-list');
-                    products.forEach(product => {
-                        const li = document.createElement('li');
-                        li.textContent = `${product.name}`;
-                        productsList.appendChild(li);
-                    });
-                </script> 
+        <div class="d-flex col-md-6 mb-4"> 
+          <div class="container-all" >
+            <div class="container-cookies d-block">
+              <div class="list">
+                <h2>Galletas De Chocolate</h2>
+                <ul id="products-list-cookies" class="product-list"></ul>
+                </ul>
+              </div>
             </div>
-            <div>
-                <h2>Té</h2>
-                <ul id="products-list-tea"></ul>
-                <script>
-                  const productstea = [
-                    { name: 'Té de Café'},
-                    { name: 'Té de Chá'},
-                    { name: 'Té de Camomila'},
-                    { name: 'Té de Ginebra'},
-                    { name: 'Té de Jengibre'},
-                ];
-                  const productsListtea = document.getElementById('products-list-tea');
-                  productstea.forEach(product => {
-                    const li = document.createElement('li');
-                    li.textContent = `${product.name}`;
-                    productsListtea.appendChild(li);
-                  });
-                </script>
+            <div class="container-cookies-1 d-block">
+              <div class="list">
+                <h2>Galletas Dulces</h2>
+                <ul id="products-list-cookies-dulces" class="product-list"></ul>
+              </div>
+              <div class="d-flex"></div>
+              <button class="whatsapp-button">Domicilios<i class="bi bi-whatsapp"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="container mt-5" id="postres">
+  <h1 class="text-center mt-5 mb-5 fw-boldtitle-products">Postres</h1>
+  <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="image-gallery">
+          <img src="/static/images/torta_chocolate.jpg" alt="Galletas" class="img-fluid rounded mb-3 main-image">
+          <div class="d-flex gap-2 justify-content-center mt-5">
+              <img src="/static/images/torta_chocolate.jpg" alt="Thumbnail 5" class="thumbnail rounded active" onclick="changeImage(event, this.src)">
+              <img src="/static/images/cupcakes.jpg" alt="Thumbnail 6" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+              <img src="/static/images/tarta.jpg" alt="Thumbnail 7" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+              <img src="/static/images/pastel.jpg" alt="Thumbnail 8" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+          </div>
+        </div>
+      </div>
+      <div class="d-flex col-md-6 mb-4"> 
+        <div class="container-all" >
+          <div class="container-postres d-block">
+            <div class="list">
+              <h2>Pasteles</h2>
+              <ul id="products-list-pasteles" class="product-list"></ul>
+              </ul>
+            </div>
+          </div>
+          <div class="container-postres-2 d-block">
+            <div class="list">
+              <h2>CupCakes</h2>
+              <ul id="products-list-cupcakes" class="product-list"></ul>
+            </div>
+            <div class="d-flex"></div>
+              <button class="whatsapp-button">Domicilios<i class="bi bi-whatsapp"></i></button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
-  </div>
-  <section class="frase-img">
-      <img src="" alt="Banner" class="img-fluid">
-  </section>
-  <div class="container mt-5">
-    <h1 class="text-center mt-5 mb-5">Bebidas</h1>
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <img src="/Coffe/static/images/Coffe-helado.svg" alt="Product" class="img-fluid rounded mb-3 product-image" id="mainImage">
-            <div class="d-flex gap-3 justify-content-center">
-                <img src="/Coffe/static/images/Coffe-helado.svg" alt="Thumbnail 1" class="thumbnail rounded active" onclick="changeImage(event, this.src)">
-                <img src="" alt="Thumbnail 2" class="thumbnail rounded" onclick="changeImage(event, this.src)">
-                <img src="" alt="Thumbnail 3" class="thumbnail rounded" onclick="changeImage(event, this.src)">
-                <img src="" alt="Thumbnail 4" class="thumbnail rounded" onclick="changeImage(event, this.src)">
-            </div>
+</div>
+</div>
+<div class="container mt-5" id="sandwiches">
+  <h1 class="text-center fw-bold mt-5 mb-5 title-products">Sandwiches</h1>
+  <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="image-gallery">
+          <img src="/static/images/vegetales.jpg" alt="Galletas" class="img-fluid rounded mb-3 main-image">
+          <div class="d-flex gap-2 mt-5 justify-content-center">
+              <img src="/static/images/vegetales.jpg" alt="Thumbnail 5" class="thumbnail rounded active" onclick="changeImage(event, this.src)">
+              <img src="/static/images/jamon.jpg" alt="Thumbnail 6" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+              <img src="/static/images/pollo.jpg" alt="Thumbnail 7" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+              <img src="/static/images/atun.jpg" alt="Thumbnail 8" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+          </div>
         </div>
-        <div class="d-flex col-md-6 mb-4"> 
-          <div class="container-all" >
-            <div class="container-cookies d-block">
-              <div class="Cookies">
-                <h1>CHOCOLATES</h1>
-                <ul>
-                  <li>Galletas De Chocolate</li>
-                  <li>Galletas De Chocolate</li>
-                  <li>Galletas De Chocolate</li>
-                  <li>Galletas De Chocolate</li>
-                </ul>
-              </div>
+      </div>
+      <div class="d-flex col-md-6 mb-4"> 
+        <div class="container-all" >
+          <div class="container-sandwiches d-block">
+            <div class="list">
+              <h2>Sandwiches</h2>
+              <ul id="products-list-sandwiches" class="product-list"></ul>
+              </ul>
             </div>
-            <div class="container-cookies-1 d-block">
-              <div class="cookies-2">
-                <li>Galletas De Chocolate</li>
-              </div>
+            <div>
+              <button class="whatsapp-button">Domicilios<i class="bi bi-whatsapp"></i></button>
             </div>
           </div>
-          <div class="container-cookies-2 d-block">
-            <div class="cookies-3">
-              <li>Galletas De Chocolate</li>
-            </div>
         </div>
-</body>
+      </div>
+    </div>
+</div>
+</div>
+<footer class="footer d-block">
+  <div class="social d-flex">
+      <div class="social-links" >
+          <h1 class="fw-bold">Contacto</h1>
+          <p >cafedelsabor@gmail.com</p>
+          <h1 class="fw-bold">Telefono</h1>
+          <p>+1 123456789</p>
+      </div>
+      <div class="social-links">
+          <h1 class="fw-bold">Redes Sociales</h1>
+          <li class="bi bi-facebook"><a href="#">Facebook</a></li>
+          <li class="bi bi-instagram"><a href="#">Instagram</a></li>
+          <li class="bi bi-twitter-x"><a href="#">X</a></li>
+          <li class="bi bi-whatsapp"><a href="#">WhatsApp</a></li>
+      </div>
+  </div>
+  <div class="copy">
+      <h5>Ⓒ 2025. CafeDelSabor. Reservados todos los derechos</h5>
+  </div>
+</footer>
+</footer>
+<script src="/static/js/js.js"></script>
+<script src="/static/js/products.js"></script>
+</body> 
 </html> 

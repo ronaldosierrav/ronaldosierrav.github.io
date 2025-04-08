@@ -13,14 +13,12 @@ body{
 }
 
 .nav-link{
-    color: white;
     margin: 0 10px;
     position: relative;
     text-decoration: none;
     padding-bottom: 8px; 
 }
 .nav-link:hover{
-    color: #ffff;
     transition: 0.3s;
 }
 .nav-link::after, .nav-link.active::after {
@@ -30,7 +28,7 @@ body{
     bottom: 0;
     width: 0%;
     height: 2px;
-    background-color: white;
+    background-color: #ffff;
     transition: width 0.3s ease-in-out;
 }
 .nav-link:hover::after, .nav-link.active::after  {
@@ -91,8 +89,6 @@ body{
     text-align: start;
     transition: all 0.3s ease 0s;
 }
-
-
 .button2:hover {
     background-color: #693b23;
     color: #ffff;
@@ -107,36 +103,33 @@ body{
 .container-history{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container-history img{
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.1);
+    object-fit: cover;
+    height: auto;
+    display: block;
 }
 .container-history p::first-letter{
     font-size: 2.5rem;
     font-weight: 700;
-
 }
 
 .history-text{
-    display: block;
     text-align: justify;
-    margin-top: 30px;
 }
 
 .history-text h1{
     text-align: center;
     color: black;
-    margin-top: 50px;
-}
-.button3{
-    background-color: #8b5e3b;
-    padding: 12px 24px;
-    font-size: 1.2rem;
-    border: none;
-    margin-right: auto;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-    color: white;
 }
 
 .tittle-cards{
@@ -147,44 +140,60 @@ body{
 
 .container-info{
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    background-color: #f8f4f1;
     margin-top: 20px;
-    background-color: #f8f4f1
 }
-.container{
-    margin-bottom: 20px;
 
+.container{
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 .card{
-    background-color: #f3b176;
+    background-color: #FFFCE0;
     border-radius: 20px;
     margin-top: 20px;
+    margin-bottom: 20px;
     border: none;
-    &:hover {
-        transition: all 0.2s ease-out;
-        box-shadow: 10px 10px 0px 1px rgba(0,0,0,0.75);
-        top: -4px;
-        border: 1px solid #cccccc;
-      }
-      &:hover:before {
-        transform: scale(2.15);
-      }
+    box-shadow: 0px 10px 5px -10px rgba(0,0,0,0.75);
+    text-align: center;
+    width: 15rem;
+    height: auto;
+}
+
+.card:hover{
+    transition: all 0.2s ease-out;
+    transform: translateY(-4px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.75);
+    border: 1px solid #cccccc;
 }
 
 .card-body{
     text-align: justify;
 }
+.card h1{
+    font-size: 1.5rem;
+    color: #5a3e2b;
+    margin-top: 20px;
+}
+
+.card img{
+    margin-left: 10px;
+    margin-top: 10px;
+}
 
 .social{
     justify-content: space-around;
-    margin-top: 30px;
 }
-
 .copy{
     text-align: center;
 }
+
+.footer{
+    border-top: 1px solid #000;
+}
 .social-links{
     list-style: none;
+    margin: 20px;
 }
 .social-links li{
     font-size: 1.3rem;
@@ -200,8 +209,24 @@ body{
     color: black;
     margin-left: 10px;
 }
-
 .card-history{
     max-width: 300px;
+
+}
+
+@media screen and (max-width: 768px) {   
+    .history-text{
+       margin-top: 30px;
+    }
+    .card{
+        width: 10rem;
+        height: auto;
+    }
     
+    .social-links li{
+        font-size: 1rem;
+    }
+    .copy h5{
+        font-size: 0.8rem;
+    }
 }

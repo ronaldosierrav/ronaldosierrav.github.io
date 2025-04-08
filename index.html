@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/Coffe/static/styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/static/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Signika:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="shortcut icon" href="/Coffe/static/images/icon.svg"> 
+    <link rel="shortcut icon" href="/static/images/icon.svg"> 
     <title>Coffe</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid ">
           <a class="navbar-brand" href="">
-            <img src="/Coffe/static/images/1.svg" class="d-inline-block align-top" alt="logo">
+            <img src="/static/images/1.svg" class="d-inline-block align-top" alt="logo">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,20 +26,20 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav flex-col flex-wrap ms-md-auto">
               <li class="nav-item col-6 col-md-auto">
-                <a class="nav-link" aria-current="page" href="/Coffe/vistas/menu.html">Menú</a>
+                <a class="nav-link" aria-current="page" href="/vistas/menu.html" style="color: #fff;">Menú</a>
               </li>
               <li class="nav-item col-6 col-md-auto">
-                <a class="nav-link" href="/Coffe/vistas/about.html">Nosotros</a>
+                <a class="nav-link" href="/vistas/about.html" style="color: #fff";>Nosotros</a>
               </li>
               <li class="nav-item col-6 col-md-auto">
-                <a class="nav-link" href="/Coffe/vistas/contact.html">Contacto</a>
+                <a class="nav-link" href="/vistas/contact.html" style="color: #fff;">Contacto</a>
               </li>
             </ul>
           </div>
         </div>
   </nav>
-  <script src="/Coffe/static/js/js.js"></script>
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -46,57 +47,49 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/Coffe/static/images/Banner-1.svg" class="img-fluid d-block w-100" alt="img-1" width="1200" height="600">
+        <img src="/static/images/banner-1.png" class="img-fluid d-block w-100" alt="img-1" width="1200" height="600">
       </div>
       <div class="carousel-item">
-        <img src="/Coffe/static/images/Banner-2.svg" class="img-fluid d-block w-100" alt="img-2" width="1200" height="600">
+        <img src="/static/images/banner-2.png" class="img-fluid d-block w-100" alt="img-2" width="1200" height="600">
       </div>
       <div class="carousel-item">
-        <img src="/Coffe/static/images/Banner-3.svg" class="img-fluid d-block w-100" alt="img-3"width="1200" height="600">
+        <img src="/static/images/banner-3.png" class="img-fluid d-block w-100" alt="img-3"width="1200" height="600">
       </div>
     </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var carouselElement = document.querySelector('#carouselExampleIndicators');
-        var carousel = new bootstrap.Carousel(carouselElement, {
-        interval: 3000,
-        ride: 'carousel'
-        });
-      });
-    </script>
+
   </div>
   <div class="container-products">
       <nav class="fw-bold">Menú</nav>
       <div class="products">
         <div>
-          <img src="/Coffe/static/images/bebidas.svg"  width="150" height="150" alt="Producto 1" class="img-fluid">
+          <img src="/static/images/bebidas.svg"  width="150" height="150" alt="Producto 1" class="img-fluid">
           <h1 >Bebidas</h1>
-            <button onclick="location.href='/Coffe/vistas/menú.html'" class="button2">Ver Productos</button>
+            <button onclick="location.href='/vistas/menu.html#bebidas'" class="button2">Ver Productos</button>
         </div>
         <div>
-          <img src="/Coffe/static/images/cookies.svg" width="150" height="150" alt="Producto 2" class="img-fluid">
+          <img src="/static/images/cookies.svg" width="150" height="150" alt="Producto 2" class="img-fluid">
           <h1>Galletas</h1>
-          <button class="button2">Ver Productos</button>
+          <button onclick="location.href='/vistas/menu.html#galletas'" class="button2">Ver Productos</button>
         </div>
         <div>
-          <img src="/Coffe/static/images/postres.svg" width="150" height="150" alt="Producto 3" class="img-fluid">
+          <img src="/static/images/postres.svg" width="150" height="150" alt="Producto 3" class="img-fluid">
           <h1>Postres</h1>
-          <button class="button2">Ver Productos</button>
+          <button onclick="location.href='/vistas/menu.html#postres'" class="button2">Ver Productos</button>
         </div>
         <div>
-          <img src="/Coffe/static/images/sandwiches.svg" width="150" height="150" alt="Producto 4" class="img-fluid">
+          <img src="/static/images/sandwiches.svg" width="150" height="150" alt="Producto 4" class="img-fluid">
           <h1>Sandwiches</h1>
-          <button class="button2">Ver Productos</button>
+          <button onclick="location.href='/vistas/menu.html#sandwiches'" class="button2">Ver Productos</button>
         </div>
   </div>
   </div>
   <div class="container-history">
-    <img src="/Coffe/static/images/history-image.svg" alt="history" width="500" height="500" class="img-fluid">
+    <img src="/static/images/TIM.gif" alt="history" width="500" height="500" class="img-fluid img-responsive">
      <div class="history-text">
         <div class="card-history">
-            <h1>Nuestra Historia</h1>
+            <h1 class="fw-bold">¡Conoce a TIM!</h1>
           <div class="card-body-history">
-            <p>Café Del Sabor nació del sueño de compartir momentos auténticos alrededor de una buena taza de café. Todo comenzó en una pequeña cocina, donde los aromas del café recién molido se mezclaban con risas, historias y una pasión profunda por los sabores que conectan.</p>
+            <p>En nuestra cafetería no solo servimos el mejor café, también tenemos a TIM, un búho curioso y observador que representa nuestra pasión por los momentos tranquilos, las buenas charlas y el aroma a café recién hecho.</p>
             <button onclick="location.href='/Coffe/vistas/about.html'" class="button2">Más Información</button>
           </div>
         </div>
@@ -108,23 +101,49 @@
       <span class="display-6">De la más alta calidad!</span>
   </div>
   <div class="container d-flex flex-wrap">
-    <div class="card d-block">
-      <div class="card-img-top d-flex">
-        <img src="/Coffe/static/images/icon.svg" alt="Café" class="img-fluid">
-        <h1> CARD XDD</h1>
+      <div class="card">
+        <div class="card-img-top d-flex">
+          <img src="/static/images/coffe-info.svg" width="50" height="50" alt="Café" class="img-fluid">
+          <h1 class="fw-bold">Café</h1>
+        </div>
+        <div class="card-body ">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, consequuntur? Lorem </p>
+        </div>
       </div>
-      <div class="parrafos">
-        <p>HOLA MUNDO</p>
+      <div class="card">
+        <div class="card-img-top d-flex">
+            <img src="/static/images/person-info.svg" width="50" height="50" alt="Café" class="img-fluid">
+            <h1 class="fw-bold">Café</h1>
+        </div>
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, consequuntur? Lorem </p>
+          </div>
       </div>
+      <div class="card">
+        <div class="card-img-top d-flex">
+            <img src="/static/images/person-info.svg" width="50" height="50" alt="Café" class="img-fluid">
+            <h1 class="fw-bold">Café</h1>
+        </div>
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, consequuntur? Lorem </p>
+          </div>
       </div>
+      <div class="card">
+        <div class="card-img-top d-flex">
+            <img src="/static/images/coffe-info.svg" width="50" height="50" alt="Café" class="img-fluid">
+            <h1 class="fw-bold">Café</h1>
+        </div>
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, consequuntur? Lorem </p>
+          </div>
+      </div>
+   </div>
   </div>
-  
   </div>
-    </div>
   </div>
   <footer class="footer d-block">
     <div class="social d-flex">
-        <div>
+        <div class="social-links" >
             <h1 class="fw-bold">Contacto</h1>
             <p >cafedelsabor@gmail.com</p>
             <h1 class="fw-bold">Telefono</h1>
@@ -142,5 +161,6 @@
         <h5>Ⓒ 2025. CafeDelSabor. Reservados todos los derechos</h5>
     </div>
   </footer>
+  <script src="/static/js/js.js"></script>
 </body>
 </html>
